@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình tròn</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    let Circle = function (radius) {
+        this.radius= radius;
+        this.getArea = function () {
+            return Math.PI*this.radius*this.radius;
+        };
+        this.getRadius = function () {
+            return this.radius;
+        };
+        this.paint = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        }
+    };
+    let circle1 = new Circle(2);
+    document.write('<br>Bán kính : ' + circle1.getRadius() + ' <br> Diện tích : ' + circle1.getArea());
+    circle1.paint();
+</script>
+</body>
+</html>
+</body>
+</html>
