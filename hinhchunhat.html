@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    let Rectangle = function (a,b) {
+        this.a = a;
+        this.b = b;
+        this.setWidth = function () {
+            return this.a;
+        }
+        this.setLength = function () {
+            return this.b;
+        }
+        this.setPerimeter = function () {
+            return this.a*2+this.b*2;
+        }
+        this.Area = function () {
+            return this.a * this.b;
+        }
+        this.paint = function () {
+            var c=document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ff0000";
+            ctx.fillRect(0,0,a,b);
+        }
+    }
+    let chunhat = new Rectangle(150,100);
+    chunhat.paint();
+    document.write("<br>Diện tích : " + chunhat.Area() + "<br>Chu vi : " + chunhat.setPerimeter());
+</script>
+</body>
+</html>
